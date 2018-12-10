@@ -6,6 +6,7 @@ sbit xin2 = P2^1;
 sbit xin3 = P2^2;
 sbit xin4 = P2^3;
 
+#define IOChip P2
 void delay(unsigned char i)
 {
     unsigned char m, n;
@@ -13,6 +14,12 @@ void delay(unsigned char i)
     for (n = 125; n > 0; n--);
 }
 
+void Seclect_Chip(char x)
+{
+    IOChip = x;
+}
+
+#if 0
 void YanzShuchu( )
 {
 	unsigned char i;
@@ -81,3 +88,4 @@ void main()
     xin4 = 1,JiexianCeshi(),xin4 = 0;
     
 }
+#endif
